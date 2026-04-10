@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in files/*; do
+    filename=$(basename "$file")
+    first_char=${filename:0:1}
+    target_folder=${first_char,,}
+    mv "$file" "$target_folder/"
+done
